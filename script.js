@@ -18,12 +18,13 @@ btn.addEventListener("click", function(e) {
                 ${data[i].show.name}</h1>
                 <h3>Language: ${data[i].show.language}</h3>
                 <h3>Start-date: ${data[i].show.premiered}</h3>
-                <button class="deatails"> More Info </button>
-                </div>`
+                <a href="${data[i].show.url}" target="_blank"><button class="deatails"> More Info</button></a>
+`
                 container.innerHTML += res;
-            }
-            console.log(data);
-        })
 
-    .catch(err => alert("Wrong Data Name!"));
+
+                console.log(data);
+            }
+        })
+        .catch(err => alert("Wrong Data Name!"));
 })
